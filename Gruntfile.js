@@ -30,22 +30,11 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     i18next_extract_gettext: {
-      default_options: {
-        options: {
-        },
+      default_options: {        
         files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'tmp/template.pot': ['test/fixtures/testjs.js', 'test/fixtures/testhtml.html']
         }
-      },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
-      }
+      }      
     },
 
     // Unit tests.

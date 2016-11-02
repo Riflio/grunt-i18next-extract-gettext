@@ -14,11 +14,6 @@ module.exports = function(grunt) {
   // creation: http://gruntjs.com/creating-tasks
 
   grunt.registerMultiTask('i18next_extract_gettext', 'Extracting a gettext POT file from multiple JS source files using i18next', function() {
-    // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({
-      punctuation: '.',
-      separator: ', '
-    });
 
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
@@ -34,19 +29,21 @@ module.exports = function(grunt) {
       }).map(function(filepath) {
         // Read file source.
         return grunt.file.read(filepath);
-      }).join(grunt.util.normalizelf(options.separator));
+      }).join(grunt.util.normalizelf(''));
 
 
       var parseOptions = {
         attr: {
-          list: ['data-i18n', 'i18nKey']
+          list: ['data-i18n']
         },
         func: {
           list: ['i18next.t', 'i18n.t', 't']
         }
       };
 
-      var parser = new require('i18next-scanner').Parser(parseOptions);
+      var Parser = new require('i18next-scanner').Parser;
+
+      var parser = new Parser(parseOptions);
       parser.parseFuncFromString(src, parseOptions);
       parser.parseAttrFromString(src, parseOptions);
       var json = parser.get().en.translation;

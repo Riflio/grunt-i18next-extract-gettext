@@ -22,6 +22,8 @@ var grunt = require('grunt');
     test.ifError(value)
 */
 
+
+
 exports.i18next_extract_gettext = {
   setUp: function(done) {
     // setup here if necessary
@@ -30,18 +32,11 @@ exports.i18next_extract_gettext = {
   default_options: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default_options');
-    var expected = grunt.file.read('test/expected/default_options');
+
+    //-- сравниваем файлы без 10 первых строк-заголовка
+    var actual = grunt.file.read('tmp/template.pot').split(grunt.util.linefeed).slice(10).join('');
+    var expected = grunt.file.read('test/expected/template.pot').split(grunt.util.linefeed).slice(10).join('');
     test.equal(actual, expected, 'should describe what the default behavior is.');
-
-    test.done();
-  },
-  custom_options: function(test) {
-    test.expect(1);
-
-    var actual = grunt.file.read('tmp/custom_options');
-    var expected = grunt.file.read('test/expected/custom_options');
-    test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
 
     test.done();
   },

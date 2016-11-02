@@ -1,0 +1,1 @@
+var myval = i18next.t('keyJS');
