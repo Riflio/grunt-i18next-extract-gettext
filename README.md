@@ -15,6 +15,7 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 
 ```js
 grunt.loadNpmTasks('grunt-i18next-extract-gettext');
+```
 
 ## The "i18next_extract_gettext" task
 
@@ -31,6 +32,7 @@ grunt.initConfig({
     },
   },
 });
+```
 
 ## Release History
 03.11.16 First work version

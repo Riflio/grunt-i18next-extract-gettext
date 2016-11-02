@@ -1,7 +1,7 @@
 {
   "name": "grunt-i18next-extract-gettext",
   "description": "Extracting a gettext POT file from multiple JS source files using i18next",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/riflio/grunt-i18next-extract-gettext",
   "author": {
     "name": "PavelK",
