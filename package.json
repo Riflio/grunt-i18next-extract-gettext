@@ -2,22 +2,22 @@
   "name": "grunt-i18next-extract-gettext",
   "description": "Extracting a gettext POT file from multiple JS source files using i18next",
   "version": "0.1.1",
-  "homepage": "https://github.com/pavelk/grunt-i18next-extract-gettext",
+  "homepage": "https://github.com/riflio/grunt-i18next-extract-gettext",
   "author": {
     "name": "PavelK",
     "email": "2me.pavelk@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/pavelk/grunt-i18next-extract-gettext.git"
+    "url": "git://github.com/riflio/grunt-i18next-extract-gettext.git"
   },
   "bugs": {
-    "url": "https://github.com/pavelk/grunt-i18next-extract-gettext/issues"
+    "url": "https://github.com/riflio/grunt-i18next-extract-gettext/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/pavelk/grunt-i18next-extract-gettext/blob/master/LICENSE"
+      "url": "https://github.com/riflio/grunt-i18next-extract-gettext/blob/master/LICENSE"
     }
   ],
   "engines": {
